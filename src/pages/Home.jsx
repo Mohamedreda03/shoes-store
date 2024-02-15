@@ -4,7 +4,6 @@ import Wrapper from "../components/Wrapper";
 import ProductCard from "../components/ProductCard";
 
 const Home = () => {
-  //   console.log(import.meta.env.VITE_STRAPI_API_TOKEN);
   return (
     <main>
       <HeroBanner />
