@@ -18,8 +18,8 @@ export const paymentRequest = async (path, cart) => {
   const response = await fetch(requestUrl, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${import.meta.env.VITE_STRAPI_API_TOKEN}`,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(cart),
   });

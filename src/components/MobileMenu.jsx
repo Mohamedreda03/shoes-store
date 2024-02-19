@@ -16,7 +16,12 @@ const subMenuData = [
   { id: 4, name: "Football shoes", doc_count: 107 },
 ];
 
-const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
+const MobileMenu = ({
+  showCatMenu,
+  setShowCatMenu,
+  setMobileMenu,
+  categories,
+}) => {
   return (
     <ul className="flex flex-col md:hidden font-bold absolute top-[70px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
       {data.map((item) => {
@@ -33,7 +38,7 @@ const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
                 </div>
                 {showCatMenu && (
                   <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
-                    {subMenuData.map((submenu) => {
+                    {categories.map((submenu) => {
                       return (
                         <Link
                           key={submenu.id}
@@ -44,9 +49,9 @@ const MobileMenu = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
                           }}
                         >
                           <li className="py-4 px-8 border-t flex justify-between">
-                            {submenu.name}
+                            {submenu.attributes.name}
                             <span className="opacity-50 text-sm">
-                              {submenu.doc_count}
+                              {submenu.attributes.products.data.length}
                             </span>
                           </li>
                         </Link>
