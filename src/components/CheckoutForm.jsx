@@ -6,6 +6,7 @@ import {
 import { useSelector } from "react-redux";
 import { paymentRequest } from "../utils/api";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -77,9 +78,12 @@ const CheckoutForm = () => {
       <form onSubmit={handleSubmit} className="flex-[0.9]">
         <PaymentElement />
 
-        <button className="mt-5 w-full bg-black text-white py-3 rounded-md">
+        <Link
+          to="/productcar/success"
+          className="mt-5 w-full bg-black text-white py-3 rounded-md"
+        >
           Submit
-        </button>
+        </Link>
       </form>
     </div>
   );
