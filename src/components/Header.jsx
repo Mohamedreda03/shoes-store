@@ -86,9 +86,9 @@ const Header = () => {
           {/* icon start */}
           <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative">
             <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
-            <div className="absolute top-1 left-5 md:left-7 text-[10px] md:text-[12px] rounded-full bg-red-600 h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] flex justify-center items-center text-white px-[2px] md:px-[5px]">
-              51
-            </div>
+            {/* <div className="absolute top-1 left-5 md:left-7 text-[10px] md:text-[12px] rounded-full bg-red-600 h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] flex justify-center items-center text-white px-[2px] md:px-[5px]">
+              0
+            </div> */}
           </div>
           {/* icon end */}
           <Link to={"/productcar"}>

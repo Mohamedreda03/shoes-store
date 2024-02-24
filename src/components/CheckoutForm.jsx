@@ -71,6 +71,9 @@ const CheckoutForm = () => {
               <div className="font-semibold text-md opacity-80">
                 MRP : {product.totalProductQuantityPrice}$
               </div>
+              <div className="font-semibold text-md opacity-80">
+                Quantity : {product.quantity}
+              </div>
             </div>
           </div>
         ))}
@@ -80,7 +83,7 @@ const CheckoutForm = () => {
 
         <Link
           to="/productcar/success"
-          className="mt-5 w-full bg-black text-white py-3 rounded-md"
+          className="mt-5 flex items-center justify-center w-full bg-black text-white py-3 rounded-md"
         >
           Submit
         </Link>
